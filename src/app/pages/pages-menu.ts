@@ -244,4 +244,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
     ],
   },
+  {
+    title: 'Rpp',
+    icon: 'power-outline',
+    link: '/pages/rpp',
+    home: true,
+  }
 ];

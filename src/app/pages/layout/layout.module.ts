@@ -8,6 +8,8 @@ import {
   NbRouteTabsetModule,
   NbStepperModule,
   NbTabsetModule, NbUserModule,
+  NbInputModule,
+  NbDatepickerModule,
 } from '@nebular/theme';
 
 import { ThemeModule } from '../../@theme/theme.module';
@@ -25,6 +27,8 @@ import { NewsService } from './news.service';
 @NgModule({
   imports: [
     FormsModule,
+    NbInputModule,
+    NbInputModule,
     ReactiveFormsModule,
     ThemeModule,
     NbTabsetModule,
@@ -36,6 +40,7 @@ import { NewsService } from './news.service';
     NbAccordionModule,
     NbUserModule,
     LayoutRoutingModule,
+    NbDatepickerModule,
   ],
   declarations: [
     LayoutComponent,
