@@ -1,41 +1,142 @@
 <div class="steppers-container row">
-
-  <div class="col-md-12 col-lg-12 col-xxxl-10">
-    <nb-card size="large">
+  <div class="col-md-10 col-lg-10 col-xxxl-10">
+    <nb-card size="giant" style="height: 100%">
       <nb-card-body>
         <nb-stepper orientation="vertical">
           <nb-step label="Request Power">
-            <h3>Request Power</h3>
             <div class="row">
               <div class="col-sm-6">
                 <div class="form-group">
-                  <label class="label">Company</label>
-                  <div class="h6">University of Chicago</div>
+                  <label class="label" for="company-name">Request Power</label>
+                  <div class="h6" for="company-name">University of Chicago</div>
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="form-group">
-                  <label for="inputLastName" class="label">Authorized User</label>
-                  <div class="h6">Large Buyer A</div>
+                  <label for="buyer-name" class="label">Authorized Buyer</label>
+                  <div class="h6" id="buyer-name">Large Buyer A</div>
                 </div>
               </div>
             </div>
             <div class="row">
+              <div class="col-md-2">
+                <nb-radio [value]="'Physical PPA'"> Physical PPA</nb-radio>
+              </div>
+              <div class="col-md-2">
+                <nb-radio [value]="'Virtual PPA'"> Virtual PPA </nb-radio>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
               <div class="col-sm-6">
                 <div class="form-group">
-                  <input nbInput fullWidth placeholder="Delivery Time Period" [nbDatepicker]="rangepicker">
+                  <label for="delivery_time_period" class="label">Delivery Time Period</label>
+                  <input nbInput fullWidth id="delivery_time_period" placeholder="Delivery Time Period" [nbDatepicker]="rangepicker">
                   <nb-rangepicker #rangepicker></nb-rangepicker>
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="form-group">
-                  <input nbInput fullWidth placeholder="Initial Response Due by" [nbDatepicker]="formpicker">
+                  <label class="label" for="initial_response">Initial Response Due By</label>
+                  <input nbInput fullWidth id="initial_response" placeholder="Initial Response Due by" [nbDatepicker]="formpicker">
                   <nb-rangepicker #formpicker></nb-rangepicker>
                 </div>
               </div>
             </div>
-            <button nbButton disabled nbStepperNext>prev</button>
-            <button nbButton nbStepperNext>next</button>
+            <div class="row">
+              <div class="form-group col-md-5">
+                <label class="label">Seller Priority</label>
+                <nb-select selected="add_another_seller">
+                  <nb-option value="add_another_seller"> Select another seller to add to priority list: </nb-option>
+                  <nb-option value="seller2">Seller2</nb-option>
+                </nb-select>
+              </div>
+              <div class="form-group col-md-7">
+                <label class="label">Seller Priorty List:</label>
+                <br>
+                <button nbButton status="primary">1) Seller A</button>
+                <button nbButton status="primary">2) Seller D</button>
+                <button nbButton status="primary">3) Seller C</button>
+                <button nbButton status="primary">4) Seller M</button>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="form-group col-md-3">
+                <label for="ISO" class="label">ISO</label>
+                <nb-select id="ISO" placeholder="PJM">
+                  <nb-option value="CSASIO">PJM</nb-option>
+                  <nb-option value="iso2">iso2</nb-option>
+                </nb-select>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="Zone" class="label">Zone</label>
+                <nb-select placeholder="Zone">
+                  <nb-option value="seller1">Illinois, ComEd</nb-option>
+                  <nb-option value="seller2">Seller2</nb-option>
+                </nb-select>
+              </div>
+            </div>
+            <div class="form-group">
+              <div>
+                <label class="label">Shape (Automatic DA)</label>
+              </div>
+              <div class="row">
+                <div class="col-md-2">
+                  <nb-radio status="basic">24*7</nb-radio>
+                </div>
+                <div class="col-md-2">
+                  <nb-radio status="basic">On Peak</nb-radio>
+                </div>
+                <div class="col-md-2">
+                  <nb-radio status="basic">Off Peak</nb-radio>
+                </div>
+                <div class="col-md-2">
+                  <nb-radio status="basic">Work Peak</nb-radio>
+                </div>
+                <div class="col-md-2">
+                  <nb-radio status="basic">Intermittent</nb-radio>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label class="label">MWs/hr </label>
+                  <input type="text" nbInput fullWidth placeholder="0">
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="inputLastName" class="label">KWs/hr</label>
+                  <input type="text" nbInput fullWidth placeholder="0">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label class="label">Power Source</label>
+                  <nb-select selected="Wind">
+                    <nb-option value="Wind">Wind</nb-option>
+                    <nb-option value="Solar">Solar</nb-option>
+                  </nb-select>
+                </div>
+              </div>  
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label class="label">Renewable Energy Arrtibute</label>
+                  <nb-select selected="Wind">
+                    <nb-option value="Wind">Included</nb-option>
+                    <nb-option value="Solar">Not Included</nb-option>
+                  </nb-select>
+                </div>
+              </div>  
+            </div>
+            <button nbButton nbStepperNext status="danger">Cancel</button>
+            <button nbButton nbStepperNext status="success">next</button>
           </nb-step>
           <nb-step label="Step 2">
             <h3>Step content #2</h3>

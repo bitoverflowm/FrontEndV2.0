@@ -249,5 +249,5 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'power-outline',
     link: '/pages/rpp',
     home: true,
-  }
+  },
 ];

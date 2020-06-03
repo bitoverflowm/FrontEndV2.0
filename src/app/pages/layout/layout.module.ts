@@ -10,6 +10,9 @@ import {
   NbTabsetModule, NbUserModule,
   NbInputModule,
   NbDatepickerModule,
+  NbRadioModule,
+  NbSelectModule,
+  NbCheckboxModule,
 } from '@nebular/theme';
 
 import { ThemeModule } from '../../@theme/theme.module';
@@ -41,6 +44,9 @@ import { NewsService } from './news.service';
     NbUserModule,
     LayoutRoutingModule,
     NbDatepickerModule,
+    NbRadioModule,
+    NbSelectModule,
+    NbCheckboxModule,
   ],
   declarations: [
     LayoutComponent,
