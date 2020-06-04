@@ -3,7 +3,7 @@
     <nb-card size="giant" style="height: 100%">
       <nb-card-body>
         <nb-stepper orientation="vertical">
-          <nb-step label="Request Power">
+          <nb-step label="Step 1">
             <div class="row">
               <div class="col-sm-6">
                 <div class="form-group">
@@ -54,10 +54,10 @@
               <div class="form-group col-md-7">
                 <label class="label">Seller Priorty List:</label>
                 <br>
-                <button nbButton status="primary">1) Seller A</button>
-                <button nbButton status="primary">2) Seller D</button>
-                <button nbButton status="primary">3) Seller C</button>
-                <button nbButton status="primary">4) Seller M</button>
+                <button nbButton status="disabled">1) Seller A</button>
+                <button nbButton status="disabled">2) Seller D</button>
+                <button nbButton status="disabled">3) Seller C</button>
+                <button nbButton status="disabled">4) Seller M</button>
               </div>
             </div>
             <hr>
@@ -139,40 +139,73 @@
             <button nbButton nbStepperNext status="success">next</button>
           </nb-step>
           <nb-step label="Step 2">
-            <h3>Step content #2</h3>
-            <p class="lorem">
-              Curabitur luctus mattis risus nec condimentum. Donec at dui turpis. Sed vehicula fringilla rutrum. Nullam
-              sed ornare magna. Mauris vitae laoreet diam. Mauris fermentum ligula at lacinia semper. Nulla placerat dui
-              eu sapien pellentesque, eu placerat leo luctus. Cras pharetra blandit fermentum.
-            </p>
-            <button nbButton nbStepperPrevious>prev</button>
-            <button nbButton nbStepperNext>next</button>
+            <h3>Estimated Value For Requested Power Purchase</h3>
+            <nb-list>
+              <nb-list-item>
+                <div><span style="font-weight: bold;">Total Volume in MW: </span> 5952 </div>
+              </nb-list-item>
+              <nb-list-item>
+                <div><span style="font-weight: bold;">REC Volume in MW: </span> 5952 </div>
+              </nb-list-item>
+              <nb-list-item>
+                <div><span style="font-weight: bold;">Total Estimated Energy Monthly Value: </span> $93,830.05 </div>
+              </nb-list-item>
+              <nb-list-item>
+                <div><span style="font-weight: bold;">Total Estimated Energy Value: </span> $190,787.76 </div>                 
+              </nb-list-item>
+              <nb-list-item>
+                <div><span style="font-weight: bold;">Total Estimated REC Monthly Value: </span> $3,029.67 </div>
+              </nb-list-item>
+              <nb-list-item>
+                <div><span style="font-weight: bold;">Total Estimated REC Value: </span> $6,160.32 </div>                 
+              </nb-list-item>
+            </nb-list>
+            <button nbButton nbStepperPrevious status="warning">Previous</button>
+            <button nbButton nbStepperNext status="success">Confirm</button>
           </nb-step>
-          <nb-step label="Third step">
-            <h3>Step content #3</h3>
-            <p class="lorem">
-              Proin varius accumsan semper. Praesent consequat tincidunt sagittis. Curabitur egestas sem a ipsum bibendum,
-              sit amet fringilla orci efficitur. Nam bibendum lectus ut viverra tristique. Fusce eu pulvinar magna, quis
-              viverra ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent metus turpis, commodo vel
-              placerat quis, lobortis in ligula.
-            </p>
-            <p class="lorem">
-              Curabitur luctus mattis risus nec condimentum. Donec at dui turpis. Sed vehicula fringilla rutrum. Nullam
-              sed ornare magna. Mauris vitae laoreet diam. Mauris fermentum ligula at lacinia semper. Nulla placerat dui
-              eu sapien pellentesque, eu placerat leo luctus. Cras pharetra blandit fermentum.
-            </p>
-            <button nbButton nbStepperPrevious>prev</button>
-            <button nbButton nbStepperNext>next</button>
-          </nb-step>
-          <nb-step label="Done">
-            <h3>Step content #4</h3>
-            <p class="lorem">
-              Proin varius accumsan semper. Praesent consequat tincidunt sagittis. Curabitur egestas sem a ipsum bibendum,
-              sit amet fringilla orci efficitur. Nam bibendum lectus ut viverra tristique. Fusce eu pulvinar magna, quis
-              viverra ex.
-            </p>
-            <button nbButton nbStepperPrevious>prev</button>
-            <button nbButton disabled nbStepperNext>next</button>
+          <nb-step label="Done!">
+            <h3>Let's go!</h3>
+            <nb-list-item class="row">
+              <div class="col-sm-6"><span style="font-weight: bold;">Company: </span> University of Chicago </div>
+              <div class="col-sm-6"><span style="font-weight: bold;">PPA: </span> MATCHRPP </div>
+            </nb-list-item>
+            <nb-list-item class="row">
+              <div class="col-sm-6"><span style="font-weight: bold;">Delivery Time Period: </span> 07-01-2020 00:00 EST - 8-31-2020 23:59 EST </div>
+              <div class="col-sm-6"><span style="font-weight: bold;">Initial Response Due By: </span> 06-01-2020 12:00 EST</div>
+            </nb-list-item>
+            <nb-list-item class="row">
+              <div class="col-sm-6"><span style="font-weight: bold;">Seller Priority: </span> Test One Seller, Seller D, Seller C, Seller M</div>
+              <div class="col-sm-6"><span style="font-weight: bold;">WHolesale Delivery Location ISO: </span> PJM </div>
+            </nb-list-item>
+            <nb-list-item class="row">
+              <div class="col-sm-6"><span style="font-weight: bold;">Wholesale Delivery Location Zone: </span> Illinois, ComEd </div>
+              <div class="col-sm-6"><span style="font-weight: bold;">Shape (Automatic DA): </span> 7*24 </div>
+            </nb-list-item>
+            <nb-list-item class="row">
+              <div class="col-sm-6"><span style="font-weight: bold;">Primary Power Source: </span> Wind </div>
+              <div class="col-sm-6"><span style="font-weight: bold;">REC/Credit: </span> Included </div>
+            </nb-list-item>
+            <nb-list-item class="row">
+              <div class="col-sm-6"><span style="font-weight: bold;">REC/Credit Type: </span> MATCHRPP </div>
+              <div class="col-sm-6"><span style="font-weight: bold;">REC/Credit Amount: </span> MWh </div>
+            </nb-list-item>
+            <nb-list-item class="row">
+              <div class="col-sm-6"><span style="font-weight: bold;">State: </span> IL </div>
+              <div class="col-sm-6"><span style="font-weight: bold;">Type: </span> ARES Wind </div>
+            </nb-list-item>
+            <nb-list-item class="row">
+              <div class="col-sm-6"><span style="font-weight: bold;">Year: </span> RY 2019 </div>
+              <div class="col-sm-6"><span style="font-weight: bold;">Total Estimated REC Monthly Value: </span> $3,029.67 </div>
+            </nb-list-item>
+            <nb-list-item class="row">
+              <div class="col-sm-6"><span style="font-weight: bold;">Total Estimated REC Value: </span> $6,160.32 </div>
+              <div class="col-sm-6"><span style="font-weight: bold;">Total Estimated Energy Monthly Value: </span> $93,830.05 </div>
+            </nb-list-item>
+            <nb-list-item class="row">
+              <div class="col-sm-6"><span style="font-weight: bold;">Total Estimated Energy Value: </span> $190,787.76 </div>
+            </nb-list-item>
+            <button nbButton nbStepperPrevious status="warning">Previous</button>
+            <button nbButton nbStepperNext status="success">GO!</button>
           </nb-step>
         </nb-stepper>
       </nb-card-body>
